@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <!-- Link to CSS file in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <!-- Form for adding a task -->
+    <div class="form-container">
+        <h2>Add a New Task</h2>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Enter task" required>
+            <button type="submit">Add Task</button>
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+    </div>
+
+    <!-- Tasks Display Section -->
+    <div class="tasks-container" id="tasksContainer">
+        <h2>Tasks</h2>
+        <!-- Tasks will be dynamically added here -->
+    </div>
+
+    <!-- Link to JavaScript file in the static folder -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

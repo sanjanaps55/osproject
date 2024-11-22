@@ -1,0 +1,28 @@
+services:
+  blog-app:
+    build:
+      context: ./blog_app
+    container_name: blog-app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app:app  # Ensure this points to the correct app entry
+      - FLASK_RUN_HOST=0.0.0.0
+    volumes:
+      - ./blog_app:/app
+
+  todo-app:
+    build:
+      context: ./to_do_app
+    container_name: todo-app
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+    volumes:
+      - ./to_do_app:/app
+
+
+
+

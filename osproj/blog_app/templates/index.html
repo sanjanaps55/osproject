@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Welcome to the Blog App</h1>
+
+    <!-- Form for adding a post -->
+    <div class="form-container">
+        <h2>Add a New Post</h2>
+        <form id="postForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="content" placeholder="Content" rows="5" required></textarea>
+            <button type="submit">Add Post</button>
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+    </div>
+
+    <!-- Posts Display Section -->
+    <div class="posts-container" id="postsContainer">
+        <h2>Existing Posts</h2>
+        <!-- Posts will be dynamically added here -->
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
